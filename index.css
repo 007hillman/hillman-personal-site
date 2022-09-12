@@ -14,7 +14,7 @@ html, body {
 main{
     padding: 2%;
     background:linear-gradient(to right bottom, rgb(92, 1, 92), orange);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -197,6 +197,7 @@ a{
     padding: 2em;
     background-color: wheat;
     border-radius: 10px;
+    overflow: scroll;
 }
 .title{
     color: orange;

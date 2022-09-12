@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+main{
+    padding: 2%;
+    background:linear-gradient(to right bottom, rgb(92, 1, 92), orange);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.working-zone{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    min-height: 90vh;
+    min-width: 100%;
+
+}
+.border{
+    border: 2px solid black;
+}
+
+.left-side ul{
+    list-style: none;
+}
+.left-side ul li{
+    border-bottom: 1px solid orange ;
+}
+.left-side ul li a{
+    color: orange;
+}
+.left-side ul li:hover a,.left-side ul li:focus a{
+    font-weight: 700;
+    color: white;
+}
+
+.right-side .photo-frame{
+    background-image: url('./my\ photo.jpg');
+    background-size: cover;
+    background-position: top;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+.central{
+    border-radius: 15px;
+}
+a{
+    text-decoration: none;
+}
+/* typography */
+
+* > h1{
+    font-weight: 300;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+
+@media all and ( min-width : 900px){
+    .left-side{
+        grid-column: 1 / span 1;
+        padding: 3em 0em 3em 0em;
+    }
+    .central{
+        grid-column: 2 / span 4;
+    }
+    .left-side ul li{
+        margin: 5px 0px;
+    }
+    .left-side ul li a{
+        display: inline-block;
+        margin: 10px 0px;
+        padding: 5px 15px 10px 20px;
+
+    }
+    .right-side{
+    padding: 2.5em 1em;
+    border-left: 1px solid #28282b11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: wheat;
+    }
+    .right-side .photo-frame{
+        width: 20vh;
+        height: 20vh;
+    }
+}
+@media all and ( max-width : 900px) and (min-width : 480px){
+    main{
+        padding: 0;
+    }
+    .working-zone {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+
+    }
+    .left-side{
+        padding: 0.5em 0em 0.5em 0.25em;
+        grid-row: 2/ span 2;
+        grid-column: 1 / span 1;
+    }
+    .central{
+        grid-column: 2/ span 5;
+        grid-row: 1/ span 8;
+        padding:  1.5em 3em;
+        margin-top: 5vh;
+
+    }
+    .right-side{
+        grid-row: 4/ span 3;
+        grid-column: 1/ span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0em 0.3em;
+    }
+    .left-side ul li{
+        margin: 5px 0px;
+    }
+    .left-side ul li a{
+        margin: 10px 0px;
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+    .right-side .photo-frame{
+        width: 12vh;
+        height: 12vh;
+     
+    }
+    .right-side{
+        text-align: center;
+    }
+}
+@media all and (max-width : 480px) {
+    .working-zone{
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: 1fr;
+        padding: 0em 0.5em;
+        
+    }
+    .left-side{
+        grid-row: 1/ span 2;
+        grid-column: 1 / span 1;
+        border: none;
+    }
+    .left-side ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .left-side ul li{
+        flex-basis: 150px;
+        border-bottom: 1px solid orange;
+        flex-grow: 1;
+        margin-right: 2px;
+    }
+    .central{
+        grid-column: 1/ span 1;
+        grid-row: 5/ span 9;
+    }
+    .right-side{
+        grid-row: 3/ span 2;
+        grid-column: 1 / span 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    .right-side .photo-frame{
+        width: 10vh;
+        height: 10vh;
+        margin-right: 1em;
+    }
+}
+@media all and (max-width : 334px) {
+    .left-side{
+        display: none;
+    }
+}
+
+/* adding styles to the central zone */
+.info-area{
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    background-color: wheat;
+    border-radius: 10px;
+}
+.title{
+    color: orange;
+    padding-left: 2rem;
+}
+::-webkit-scrollbar{
+    width: 0.25em;
+}
+::-webkit-scrollbar-track{
+    background-color: inherit;
+}
+::-webkit-scrollbar-thumb{
+    background: inherit;
+}
+::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active{
+    background: tomato;
+}
+table{
+    font-size: 0.9em;
+}
+table tr td + td{
+    padding: 0.25em 2em;
+}
